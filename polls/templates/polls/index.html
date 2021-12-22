@@ -1,0 +1,10 @@
+{%extends 'polls/header.html' %}
+{%block content%}
+<h1>Hello World</h1>
+<p>My name is {{name}}</p>
+<ul>
+    {% for item in taisan %}
+    <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+{%endblock%}

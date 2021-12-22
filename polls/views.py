@@ -4,4 +4,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello World")
+    myName = 'Minh'
+    taisan = ["Phone", 'Computer', "Phane"]
+    conText = {"name": myName, "taisan": taisan}
+    return render(request, "polls/index.html", conText)
