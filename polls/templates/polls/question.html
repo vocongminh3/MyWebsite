@@ -3,7 +3,7 @@
 
     {%if dsquest%}
         {%for item in dsquest%}
-            <p>{{item.question_text}}</p>
+            <a href="{%url 'detail' item.id %}"><p>{{item.question_text}}</p></a>
         {% endfor %}
     {% else %}
         <h3>No data</h3>

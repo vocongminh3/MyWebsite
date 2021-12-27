@@ -3,10 +3,11 @@
 
     {%if qs%}
         <h3>{{qs.question_text}}</h3>
-        <form action="">
+        <form action="{%url 'vote' qs.id%}" method="POST">
+            {% csrf_token %}
         <ul>
         {%for item in qs.choice_set.all%}
-            <li><input type="radio" value={{item.choice_text}} name="choice">{{item.choice_text}}</li>
+            <li><input type="radio" value={{item.id}} name="choice">{{item.choice_text}}</li>
         {% endfor %}
         <p><input type="submit" value="send"></p>
         </ul>

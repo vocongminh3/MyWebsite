@@ -22,3 +22,8 @@ def viewlist(request):
 def detailView(request, question_id):
     q = Question.objects.get(pk=question_id)
     return render(request, "polls/detailQuestion.html", {"qs": q})
+
+def vote(request,question_id):
+    q = Question.objects.get(pk=question_id)
+    data = request.POST["choice"]
+    return HttpResponse(data)
