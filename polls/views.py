@@ -23,7 +23,14 @@ def detailView(request, question_id):
     q = Question.objects.get(pk=question_id)
     return render(request, "polls/detailQuestion.html", {"qs": q})
 
-def vote(request,question_id):
+
+def vote(request, question_id):
     q = Question.objects.get(pk=question_id)
-    data = request.POST["choice"]
-    return HttpResponse(data)
+    try:
+        dulieu = request.POST["choice"]
+        c = q.choice_set.get(pk=dulieu)
+    except:
+        HttpResponse("lỗi khẳng có choice")
+    c.vote = c.vote + 1
+    c.save()
+    return render(request, "polls/result.html", {"q": q})

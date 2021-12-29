@@ -1,0 +1,12 @@
+{%extends 'polls/header.html' %}
+{%block content%}
+
+    {%if q%}
+        <h1>{{ q.question_text }}</hl>
+        <p>Kết quả của cuộc bình chọn là: </p>
+        {% for item in q.choice_set.all %}
+        <p>{{ item.choice_text}} : {{item.vote}} </p>
+        {% endfor %}
+        <a href="{% url 'view_list'%}">Continue vote</a>
+    {% endif %}
+{%endblock%}
