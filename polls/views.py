@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import redirect, render, get_object_or_404
 from django.http import HttpResponse
 from .models import Question
 # Create your views here.
@@ -34,3 +34,7 @@ def vote(request, question_id):
     c.vote = c.vote + 1
     c.save()
     return render(request, "polls/result.html", {"q": q})
+
+
+def tailieu(request):
+    return redirect('https: // docs.google.com/document/d/1QG9lc-cs0MRLVJ-lwQgkT-kSIJGnqJ2q/edit?usp=sharing & ouid=108391021487747039184 & rtpof=true & sd=true')
