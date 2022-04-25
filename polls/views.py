@@ -38,3 +38,7 @@ def vote(request, question_id):
 
 def tailieu(request):
     return redirect('https://docs.google.com/document/d/1QG9lc-cs0MRLVJ-lwQgkT-kSIJGnqJ2q/edit?usp=sharing&ouid=108391021487747039184&rtpof=true&sd=true')
+
+
+def cv(request):
+    return redirect('https://drive.google.com/file/d/1JXFw1GIIGq3BtR2_KI2RWqxLQ5cuOcLr/view?usp=sharing')
