@@ -42,3 +42,11 @@ def tailieu(request):
 
 def cv(request):
     return redirect('https://drive.google.com/file/d/1JXFw1GIIGq3BtR2_KI2RWqxLQ5cuOcLr/view?usp=sharing')
+
+
+def xstk(request):
+    return redirect('https://drive.google.com/file/d/1erLldB6yXAKDwir3hTVpJuvlGvBCAjNF/view?usp=sharing')
+
+
+def xstk1(request):
+    return redirect('https://drive.google.com/file/d/1m972bRvQjhU4nRB2kqVM9WWHrWJh0BWd/view?usp=sharing')
