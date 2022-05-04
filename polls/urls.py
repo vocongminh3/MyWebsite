@@ -8,6 +8,6 @@ urlpatterns = [
     path('<int:question_id>', views.vote, name="vote"),
     path('tailieu', views.tailieu, name="tailieu"),
     path('cv', views.cv, name="cv"),
-    path('xstk', views.cv, name="cv"),
-    path('xstk1', views.cv, name="cv"),
+    path('xstk', views.xstk, name="xstk"),
+    path('xstk1', views.xstk1, name="xstk1"),
 ]
