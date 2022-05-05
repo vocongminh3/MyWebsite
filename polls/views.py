@@ -45,7 +45,7 @@ def cv(request):
 
 
 def xstk(request):
-    return redirect('https://drive.google.com/file/d/1erLldB6yXAKDwir3hTVpJuvlGvBCAjNF/view?usp=sharing')
+    return redirect('https://drive.google.com/file/d/1iuuNzR-imNrL4wF0BxzjWc-t3k8wsUa4/view?usp=sharing')
 
 
 def xstk1(request):
